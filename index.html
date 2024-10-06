@@ -10,12 +10,10 @@
     var date = new Date();
     var hours = date.getHours();
     var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
        //* добавление ведущих нулей */
       if (hours < 10) hours = "0" + hours;
       if (minutes < 10) minutes = "0" + minutes;
-      if (seconds < 10) seconds = "0" + seconds;
-        document.getElementById("id_clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+        document.getElementById("id_clock").innerHTML = hours + ":" + minutes;
         setTimeout("digitalClock()", 1000);
    }
   </script>
@@ -35,7 +33,7 @@
         <div id="textBlock" style="margin: 20px 0; font-size: 18px; text-align: center;">
             <h1>t.me/kas_666</h1>
         </div>
-        <div id="id_clock"></div>
+        <div id="id_clock" font-size:14pt></div>
     <script>digitalClock();</script>
 
     </div>
