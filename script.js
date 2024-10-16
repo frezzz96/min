@@ -67,7 +67,20 @@ const images = [
     '57.jpg',
     '58.jpg',
     '59.jpg',
-    '60.jpg'
+    '60.jpg',
+    '61.jpg',
+    '62.jpg',
+    '63.jpg',
+    '64.jpg',
+    '65.jpg',
+    '66.jpg',
+    '67.jpg',
+    '68.jpg',
+    '69.jpg',
+    '70.jpg',
+    '70.jpg',
+    '71.jpg',
+    '72.jpg'
     
     // Add more image URLs here
 ];
