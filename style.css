@@ -1,3 +1,4 @@
+/* Общие стили для контейнера */
 .container {
     display: flex;
     flex-direction: column;
@@ -5,63 +6,34 @@
     text-align: center;
     padding: 60px;
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    color: White;
-    font-size:1.4vw;
+    color: white;
+    font-size: 1.4vw;  /* Можно использовать vw для адаптивного размера */
     font-weight: 300;
-    text-shadow:
-     -2px -2px 0 #000,
-     2px -1px 0 #000,
-     -2px 1px 0 #000,
-     2px 2px 0 #000;
-    font-size: large;
+    text-shadow: 
+        -2px -2px 0 #000,
+        2px -1px 0 #000,
+        -2px 1px 0 #000,
+        2px 2px 0 #000;
 }
 
-h1{
+/* Стили для заголовка h1 */
+h1 {
     font-weight: 900;
+    font-size: 2.5rem;  /* Добавляем размер для h1 */
+    margin-bottom: 20px;
 }
 
+/* Стиль для контейнера с кнопкой */
 .con {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px;
     color: black;
-
-
+    font-weight: 700;  /* Задаем более жирное начертание */
 }
 
-
-.con{
-    display: flex;
-    font-weight: 700;
-
-}
-
-
-.italic{
-
-    font-style: oblique;
-    width: 700px;
-    height: 156px;
-
-}
-
-
-
-.btn-new {
-
-}
-
-.btn-new:hover {
-  transform: translate(0,-3px);
-  box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 1);
-}
-
-
+/* Стили для кнопки */
 #showImageBtn {
     box-shadow: 0 5px 15px 0 rgba(11, 99, 246, 1);
     transition: 0.5s;
@@ -69,22 +41,42 @@ h1{
     height: 96px;
     border-radius: 60px;
     cursor: pointer;
-    color: White;
+    color: white;
     background: #00008B;
-    font-style: sans-serif;
-    font-size:5vw;
+    font-size: 5vw;  /* Используем vw для адаптивного размера */
     font-weight: 800;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Эффект при наведении на кнопку */
+#showImageBtn:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 1);
+}
+
+/* Стили для изображений */
 #randomImage {
     border-radius: 60px;
     border: 10px solid #56382d;
     width: 500px;
     height: 500px;
     object-fit: cover;
+    margin-bottom: 30px; /* Отступ от изображения */
 }
+
+/* Стили фона страницы */
 body {
-  background-position: center;
-  background-image: url('https://i.pinimg.com/564x/5e/62/a7/5e62a7c8baa26301c7f1f1566018de24.jpg'); /* Replace with your image URL */  background-repeat: no-repeat;
-  background-size: 190% 190%;
+    background-position: center;
+    background-image: url('https://i.pinimg.com/564x/5e/62/a7/5e62a7c8baa26301c7f1f1566018de24.jpg'); /* Замените на вашу ссылку */
+    background-repeat: no-repeat;
+    background-size: cover;  /* Покрываем весь экран фоном */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
