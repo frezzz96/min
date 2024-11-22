@@ -88,34 +88,33 @@ body {
 #placeholderContainer {
     font-size: 2rem;
     color: white;
-    z-index: 2; /* Поверх фона */
+    z-index: 2;
     margin-top: 20px;
     text-align: center;
-    display: none; /* Скрыт изначально */
+    display: none;
 }
 
-/* Контейнер для скрытого контента */
-#content {
-    position: relative;
-    z-index: 1; /* Убедитесь, что это ниже, чем у сообщения */
+/* Для текста "Идет подключение к игре" */
+#connectingMessage {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;  /* Скрыто по умолчанию */
+    text-align: center;
 }
 
-/* Для предотвращения повторения фона */
-html, body {
-    height: 100%;
-    margin: 0;
+/* Для времени */
+#id_clock {
+    font-size: 50px;
+    margin-top: 20px;
 }
 
-/* Плавный эффект появления текста */
-.fade-in {
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+/* Для текста "t.me/kas_666" */
+#textBlock {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
 }
