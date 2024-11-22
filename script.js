@@ -18,16 +18,19 @@ const images = [
 ];
 
 // Обработчик события при клике на кнопку
-showImageBtn.addEventListener('click', () => {
-    // Показываем сообщение о подключении
-    placeholderContainer.innerHTML = "<h2>Идет подключение к вашей игре...</h2>";
-    randomImage.style.display = "none"; // Скрываем текущее изображение
+document.getElementById('showImageBtn').addEventListener('click', function() {
+    // Скрыть кнопку
+    document.getElementById('showImageBtn').style.display = 'none';
 
-    // Добавляем задержку в 3 секунды
-    setTimeout(() => {
-        const randomIndex = Math.floor(Math.random() * images.length); // Генерируем случайный индекс
-        randomImage.src = images[randomIndex]; // Меняем источник изображения
-        randomImage.style.display = "block"; // Показываем новое изображение
-        placeholderContainer.innerHTML = ""; // Очищаем сообщение
-    }, 3000); // Задержка 3 секунды
+    // Показать текст с анимацией
+    let placeholder = document.getElementById('placeholderContainer');
+    placeholder.style.display = 'block';
+    placeholder.classList.add('fade-in'); // Добавляем анимацию
+
+    // Если нужно, можно показать изображение или другие действия
+    let randomImage = document.getElementById('randomImage');
+    randomImage.src = 'your-image-path.jpg'; // Укажите путь к вашему изображению
+
+    // Можно добавить другие действия при клике, если нужно.
 });
+
