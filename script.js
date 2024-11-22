@@ -85,8 +85,18 @@ const images = [
     // Add more image URLs here
 ];
 showImageBtn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * images.length);
-    randomImage.src = images[randomIndex];
+    // Устанавливаем сообщение о подключении
+    placeholderContainer.innerHTML = "<h2>Идет подключение к вашей игре...</h2>";
+    randomImage.style.display = "none"; // Скрываем текущее изображение
+    
+    // Добавляем задержку в 3 секунды
+    setTimeout(() => {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        randomImage.src = images[randomIndex]; // Меняем изображение
+        randomImage.style.display = "block"; // Показываем новое изображение
+        placeholderContainer.innerHTML = ""; // Очищаем сообщение
+    }, 3000); // Задержка 3 секунды
+});
 
 //    imageElement.id = 'randomImage';
 //    imageElement.classList.add('image-container-hidden');
