@@ -84,6 +84,7 @@ const images = [
     
     // Add more image URLs here
 ];
+
 showImageBtn.addEventListener('click', () => {
     // Устанавливаем сообщение о подключении
     placeholderContainer.innerHTML = "<h2>Идет подключение к вашей игре...</h2>";
@@ -97,6 +98,7 @@ showImageBtn.addEventListener('click', () => {
         placeholderContainer.innerHTML = ""; // Очищаем сообщение
     }, 3000); // Задержка 3 секунды
 });
+
 
 //    imageElement.id = 'randomImage';
 //    imageElement.classList.add('image-container-hidden');
