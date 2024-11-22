@@ -7,7 +7,7 @@
     padding: 60px;
     font-family: "Montserrat", sans-serif;
     color: white;
-    font-size: 1.4vw;  /* Используем vw для адаптивного размера */
+    font-size: 1.4vw;
     font-weight: 300;
     text-shadow: 
         -2px -2px 0 #000,
@@ -19,7 +19,7 @@
 /* Стили для заголовка h1 */
 h1 {
     font-weight: 900;
-    font-size: 2.5rem;  /* Увеличиваем размер для h1 */
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
@@ -30,7 +30,7 @@ h1 {
     align-items: center;
     padding: 50px;
     color: black;
-    font-weight: 700;  /* Жирное начертание для текста */
+    font-weight: 700;
 }
 
 /* Стили для кнопки */
@@ -43,13 +43,13 @@ h1 {
     cursor: pointer;
     color: white;
     background: #00008B;
-    font-size: 5vw;  /* Адаптивный размер шрифта */
+    font-size: 5vw;
     font-weight: 800;
     text-align: center;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;  /* Отступ сверху */
+    margin-top: 20px;
 }
 
 /* Эффект при наведении на кнопку */
@@ -65,7 +65,7 @@ h1 {
     width: 500px;
     height: 500px;
     object-fit: cover;
-    margin-bottom: 30px; /* Отступ от изображения */
+    margin-bottom: 30px;
     display: block;
     max-width: 100%;
 }
@@ -73,10 +73,10 @@ h1 {
 /* Стили фона страницы */
 body {
     background-position: center;
-    background-image: url('https://i.pinimg.com/564x/5e/62/a7/5e62a7c8baa26301c7f1f1566018de24.jpg'); /* Замените на вашу ссылку */
+    background-image: url('https://i.pinimg.com/564x/5e/62/a7/5e62a7c8baa26301c7f1f1566018de24.jpg');
     background-repeat: no-repeat;
-    background-size: cover;  /* Растягиваем фон на весь экран */
-    height: 100vh;            /* Заполняем весь экран */
+    background-size: cover;
+    height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -88,19 +88,34 @@ body {
 #placeholderContainer {
     font-size: 2rem;
     color: white;
-    z-index: 1; /* Поверх фона */
-    margin-top: 20px;  /* Размещение сообщения ниже кнопки */
+    z-index: 2; /* Поверх фона */
+    margin-top: 20px;
     text-align: center;
+    display: none; /* Скрыт изначально */
 }
 
-/* Стили для контента страницы */
+/* Контейнер для скрытого контента */
 #content {
     position: relative;
-    z-index: 2; /* Гарантируем, что контент будет отображаться поверх фонового изображения */
+    z-index: 1; /* Убедитесь, что это ниже, чем у сообщения */
 }
 
 /* Для предотвращения повторения фона */
 html, body {
     height: 100%;
     margin: 0;
+}
+
+/* Плавный эффект появления текста */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
