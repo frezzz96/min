@@ -18,31 +18,9 @@ const images = [
 ];
 
 // Обработчик события при клике на кнопку
-document.getElementById('showImageBtn').addEventListener('click', function() {
-    // Скрыть кнопку
-    document.getElementById('showImageBtn').style.display = 'none';
-
-    // Скрыть изображение
-    let randomImage = document.getElementById('randomImage');
-    randomImage.style.display = 'none';
-
-    // Показать текст "Идет подключение к игре"
-    let connectingMessage = document.getElementById('connectingMessage');
-    connectingMessage.style.display = 'block';
-    
-    // Показать другие элементы (время и текст)
-    let textBlock = document.getElementById('textBlock');
-    textBlock.style.display = 'block';
-
-    let clock = document.getElementById('id_clock');
-    clock.style.display = 'block';
-    
-    // Можно добавить логику для загрузки изображения или других действий
-    setTimeout(() => {
-        // Пример задержки для эмуляции подключения
-        connectingMessage.innerHTML = "Подключение к вашей игре...";
-    }, 1000);
-});
+showImageBtn.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    randomImage.src = images[randomIndex];
 
 
 
