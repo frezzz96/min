@@ -29,14 +29,14 @@ document.getElementById('showImageBtn').addEventListener('click', function() {
     // Показать текст "Идет подключение к игре"
     let connectingMessage = document.getElementById('connectingMessage');
     connectingMessage.style.display = 'block';
-
-    // Показать другие элементы
+    
+    // Показать другие элементы (время и текст)
     let textBlock = document.getElementById('textBlock');
     textBlock.style.display = 'block';
 
     let clock = document.getElementById('id_clock');
     clock.style.display = 'block';
-
+    
     // Можно добавить логику для загрузки изображения или других действий
     setTimeout(() => {
         // Пример задержки для эмуляции подключения
