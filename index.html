@@ -1,30 +1,50 @@
-/* Обеспечивает, чтобы изображение сохраняло свои пропорции и не искажалось */
-.image-container {
-    width: 100%;          /* Растягиваем на всю ширину контейнера */
-    height: auto;         /* Автоматическая высота, чтобы сохранить пропорции */
-    object-fit: contain;  /* Сохраняет пропорции изображения */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Image Mini App</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function digitalClock() {
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            // Добавление ведущих нулей
+            if (hours < 10) hours = "0" + hours;
+            if (minutes < 10) minutes = "0" + minutes;
+            document.getElementById("id_clock").innerHTML = hours + ":" + minutes;
+            setTimeout(digitalClock, 1000);
+        }
+    </script>
+</head>
+<body>
+    <div style="font-family:Arial" class="container">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <h1>СИГНАЛЫ</h1>
 
-/* Добавим стили для контейнера с изображением */
-#randomImage {
-    max-width: 100%;      /* Максимальная ширина 100% */
-    height: auto;         /* Автоматическая высота */
-    display: block;       /* Блочный элемент для выравнивания */
-    margin: 0 auto;       /* Центрируем изображение */
-}
+        <!-- Контейнер для текста или изображения -->
+        <div id="placeholderContainer" style="text-align: center; font-size: 22px; margin: 20px 0;">
+            <!-- Сообщение или пустое место -->
+        </div>
 
-/* Дополнительные стили для кнопки */
-#showImageBtn {
-    font-family: Arial;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        <!-- Скрываем изображение через CSS, оно будет появляться после загрузки -->
+        <img id="randomImage" src="ss.jpg" class="image-container" style="display: block; margin: 0 auto;">
 
-#showImageBtn:hover {
-    background-color: #45a049;
-}
+        <div id="textBlock" style="margin: 20px 0; font-size: 22px; text-align: center;">
+            <h1>t.me/kas_666</h1>
+        </div>
+
+        <div id="id_clock" style="font-size: 50px;"></div>
+        <script>digitalClock();</script>
+    </div>
+
+    <!-- Кнопка для показа изображения -->
+    <div class="con">
+        <button id="showImageBtn" style="font-family: Arial; margin-top: 20px;">GET SIGNAL</button>
+    </div>
+   <script src="script.js"></script>
+</body>
+</html>
