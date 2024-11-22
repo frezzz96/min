@@ -84,16 +84,6 @@ body {
     flex-direction: column;
 }
 
-/* Стили для контейнера сообщений */
-#placeholderContainer {
-    font-size: 2rem;
-    color: white;
-    z-index: 2;
-    margin-top: 20px;
-    text-align: center;
-    display: none;
-}
-
 /* Для текста "Идет подключение к игре" */
 #connectingMessage {
     font-size: 2rem;
@@ -110,6 +100,7 @@ body {
 #id_clock {
     font-size: 50px;
     margin-top: 20px;
+    z-index: 2;
 }
 
 /* Для текста "t.me/kas_666" */
@@ -117,4 +108,5 @@ body {
     font-size: 22px;
     text-align: center;
     margin-top: 20px;
+    z-index: 2;
 }
