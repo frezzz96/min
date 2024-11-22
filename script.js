@@ -22,15 +22,27 @@ document.getElementById('showImageBtn').addEventListener('click', function() {
     // Скрыть кнопку
     document.getElementById('showImageBtn').style.display = 'none';
 
-    // Показать текст с анимацией
-    let placeholder = document.getElementById('placeholderContainer');
-    placeholder.style.display = 'block';
-    placeholder.classList.add('fade-in'); // Добавляем анимацию
-
-    // Если нужно, можно показать изображение или другие действия
+    // Скрыть изображение
     let randomImage = document.getElementById('randomImage');
-    randomImage.src = 'your-image-path.jpg'; // Укажите путь к вашему изображению
+    randomImage.style.display = 'none';
 
-    // Можно добавить другие действия при клике, если нужно.
+    // Показать текст "Идет подключение к игре"
+    let connectingMessage = document.getElementById('connectingMessage');
+    connectingMessage.style.display = 'block';
+
+    // Показать другие элементы
+    let textBlock = document.getElementById('textBlock');
+    textBlock.style.display = 'block';
+
+    let clock = document.getElementById('id_clock');
+    clock.style.display = 'block';
+
+    // Можно добавить логику для загрузки изображения или других действий
+    setTimeout(() => {
+        // Пример задержки для эмуляции подключения
+        connectingMessage.innerHTML = "Подключение к вашей игре...";
+    }, 1000);
 });
+
+
 
