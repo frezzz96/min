@@ -72,11 +72,12 @@ body {
     background-position: center;
     background-image: url('https://i.pinimg.com/564x/5e/62/a7/5e62a7c8baa26301c7f1f1566018de24.jpg'); /* Замените на вашу ссылку */
     background-repeat: no-repeat;
-    background-size: cover;  /* Покрываем весь экран фоном */
-    height: 100vh;
+    background-size: cover;  /* Фон будет растянут на весь экран, сохраняя пропорции */
+    height: 100vh;            /* Заполнение всего экрана */
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
