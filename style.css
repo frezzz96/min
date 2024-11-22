@@ -84,13 +84,23 @@ body {
     flex-direction: column;
 }
 
-/* Убираем белую полосу */
+/* Стили для контейнера сообщений */
 #placeholderContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 2rem;
     color: white;
     z-index: 1; /* Поверх фона */
+    margin-top: 20px;  /* Размещение сообщения ниже кнопки */
+    text-align: center;
+}
+
+/* Стили для контента страницы */
+#content {
+    position: relative;
+    z-index: 2; /* Гарантируем, что контент будет отображаться поверх фонового изображения */
+}
+
+/* Для предотвращения повторения фона */
+html, body {
+    height: 100%;
+    margin: 0;
 }
